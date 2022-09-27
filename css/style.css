@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "TTNorms";
+    font-weight: 700;
+    src: local("TTNorms-Bold"), url("/fonts/TTNorms-Bold.otf") format("otf")
+}
+@font-face {
+    font-family: "TTNorms";
+    font-weight: 400;
+    src: local("TTNorms-Regular"), url("/fonts/TTNorms-Bold.otf") format("otf")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    border: none;
+}
+
+body {
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: 400;
+    font-family: 'TTNorms', sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+*::placeholder {
+    color: #B3B3BA;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+.container{
+    margin: 100px auto;
+    max-width: 527px;
+    width: 100%;
+}
+form{
+    background: #F5F5FA;
+    border-radius: 12px;
+    padding: 20px;
+}
+h3{
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #B3B3BA;
+    margin-bottom: 10px;
+}
+
+.title{
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 30px;
+}
+.input {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 11px 10px;
+    display: block;
+    margin-bottom: 20px
+    width: 100%;
+    font-size: 18px;
+    line-height: 26px;
+
+    &::placeholder {
+    color: #B3B3BA;
+    }
+}
+.textarea{
+    resize: none;
+    height: 180px;
+}
+button{
+    background: #24A3FF;
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 250px;
+    height: 50px;
+}
